@@ -1,0 +1,115 @@
+# Developer Custom - 开发工具、IDE、代码托管与依赖仓库
+# 用于 IDEA/JetBrains、Gradle Wrapper、Maven、Android、Git、npm、PyPI、Go、Rust、Docker 等
+# 在订阅模板的“🧑‍💻 开发服务”组中可选择 DIRECT 或代理策略
+
+# IntelliJ IDEA 进程（Mihomo 桌面端）
+PROCESS-NAME,idea64.exe
+PROCESS-NAME,idea.exe
+PROCESS-NAME,idea
+
+# JetBrains / IntelliJ / Kotlin
+DOMAIN-SUFFIX,intellij.com
+DOMAIN-SUFFIX,intellij.net
+DOMAIN-SUFFIX,intellij.org
+DOMAIN-SUFFIX,jetbrains.com
+DOMAIN-SUFFIX,jetbrains.net
+DOMAIN-SUFFIX,jetbrains.org
+DOMAIN-SUFFIX,jetbrains.space
+DOMAIN-SUFFIX,jetbrains.team
+DOMAIN-SUFFIX,datalore.io
+DOMAIN-SUFFIX,kotlinlang.org
+DOMAIN-SUFFIX,kotlinconf.com
+
+# Gradle / Develocity（gradlew 下载发行包、插件和依赖时使用）
+DOMAIN-SUFFIX,gradle.org
+DOMAIN-SUFFIX,gradle.com
+DOMAIN-SUFFIX,develocity.ai
+
+# Maven / Android / JitPack
+DOMAIN,repo1.maven.org
+DOMAIN,repo.maven.apache.org
+DOMAIN,search.maven.org
+DOMAIN-SUFFIX,maven.org
+DOMAIN-SUFFIX,maven.apache.org
+DOMAIN-SUFFIX,mvnrepository.com
+DOMAIN-SUFFIX,sonatype.org
+DOMAIN-SUFFIX,jitpack.io
+DOMAIN-SUFFIX,jitpack.com
+DOMAIN,maven.google.com
+DOMAIN,dl.google.com
+DOMAIN-SUFFIX,android.com
+DOMAIN-SUFFIX,tools.android.com
+
+# Git 与代码托管
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,github.io
+DOMAIN-SUFFIX,githubapp.com
+DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,gitlab.com
+DOMAIN-SUFFIX,gitlab.io
+DOMAIN-SUFFIX,gitlab-static.net
+DOMAIN-SUFFIX,bitbucket.org
+DOMAIN-SUFFIX,bitbucket.io
+DOMAIN-SUFFIX,sourceforge.net
+DOMAIN-SUFFIX,sf.net
+
+# Node.js / npm / Yarn / pnpm
+DOMAIN-SUFFIX,npmjs.org
+DOMAIN-SUFFIX,npmjs.com
+DOMAIN-SUFFIX,nodejs.org
+DOMAIN-SUFFIX,yarnpkg.com
+DOMAIN-SUFFIX,pnpm.io
+DOMAIN-SUFFIX,npmmirror.com
+
+# Python / PyPI / Conda
+DOMAIN-SUFFIX,pypi.org
+DOMAIN-SUFFIX,pythonhosted.org
+DOMAIN-SUFFIX,python.org
+DOMAIN-SUFFIX,pypa.io
+DOMAIN-SUFFIX,anaconda.com
+DOMAIN-SUFFIX,anaconda.org
+DOMAIN-SUFFIX,conda.io
+
+# Go modules
+DOMAIN-SUFFIX,go.dev
+DOMAIN-SUFFIX,golang.org
+DOMAIN-SUFFIX,goproxy.io
+DOMAIN-SUFFIX,goproxy.cn
+DOMAIN-SUFFIX,goproxy.com.cn
+
+# Rust / Cargo
+DOMAIN-SUFFIX,crates.io
+DOMAIN-SUFFIX,rust-lang.org
+DOMAIN-SUFFIX,rustup.rs
+
+# Docker / 容器镜像
+DOMAIN-SUFFIX,docker.com
+DOMAIN-SUFFIX,docker.io
+DOMAIN-SUFFIX,dockerhub.com
+DOMAIN-SUFFIX,compose-spec.io
+DOMAIN-SUFFIX,quay.io
+DOMAIN-SUFFIX,gcr.io
+DOMAIN-SUFFIX,ghcr.io
+
+# Flutter / Dart
+DOMAIN-SUFFIX,flutter.dev
+DOMAIN-SUFFIX,dart.dev
+DOMAIN-SUFFIX,pub.dev
+DOMAIN-SUFFIX,dartlang.org
+DOMAIN,storage.googleapis.com
+
+# 常用国内镜像；开发组选择 DIRECT 时这些镜像会保持直连
+DOMAIN,maven.aliyun.com
+DOMAIN-SUFFIX,mirrors.aliyun.com
+DOMAIN-SUFFIX,mirrors.cloud.tencent.com
+DOMAIN-SUFFIX,repo.huaweicloud.com
+DOMAIN-SUFFIX,mirrors.tuna.tsinghua.edu.cn
+DOMAIN-SUFFIX,mirrors.ustc.edu.cn
+
+# 常用开发文档与社区
+DOMAIN-SUFFIX,apache.org
+DOMAIN-SUFFIX,spring.io
+DOMAIN-SUFFIX,spring.net
+DOMAIN-SUFFIX,stackoverflow.com
+DOMAIN-SUFFIX,sourcegraph.com

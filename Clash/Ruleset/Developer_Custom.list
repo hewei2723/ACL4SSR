@@ -60,7 +60,6 @@ DOMAIN-SUFFIX,npmjs.com
 DOMAIN-SUFFIX,nodejs.org
 DOMAIN-SUFFIX,yarnpkg.com
 DOMAIN-SUFFIX,pnpm.io
-DOMAIN-SUFFIX,npmmirror.com
 
 # Python / PyPI / Conda
 DOMAIN-SUFFIX,pypi.org
@@ -74,9 +73,6 @@ DOMAIN-SUFFIX,conda.io
 # Go modules
 DOMAIN-SUFFIX,go.dev
 DOMAIN-SUFFIX,golang.org
-DOMAIN-SUFFIX,goproxy.io
-DOMAIN-SUFFIX,goproxy.cn
-DOMAIN-SUFFIX,goproxy.com.cn
 
 # Rust / Cargo
 DOMAIN-SUFFIX,crates.io
@@ -98,14 +94,6 @@ DOMAIN-SUFFIX,dart.dev
 DOMAIN-SUFFIX,pub.dev
 DOMAIN-SUFFIX,dartlang.org
 DOMAIN,storage.googleapis.com
-
-# 常用国内镜像；开发组选择 DIRECT 时这些镜像会保持直连
-DOMAIN,maven.aliyun.com
-DOMAIN-SUFFIX,mirrors.aliyun.com
-DOMAIN-SUFFIX,mirrors.cloud.tencent.com
-DOMAIN-SUFFIX,repo.huaweicloud.com
-DOMAIN-SUFFIX,mirrors.tuna.tsinghua.edu.cn
-DOMAIN-SUFFIX,mirrors.ustc.edu.cn
 
 # 常用开发文档与社区
 DOMAIN-SUFFIX,apache.org

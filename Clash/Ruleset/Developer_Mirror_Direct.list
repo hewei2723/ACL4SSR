@@ -1,0 +1,30 @@
+# Developer Mirror Direct - 国内开发镜像固定直连
+# 本规则优先于“🧑‍💻 开发服务”，不随开发分组的代理选择变化
+
+# 阿里云 / npmmirror
+DOMAIN,maven.aliyun.com
+DOMAIN-SUFFIX,mirrors.aliyun.com
+DOMAIN-SUFFIX,npmmirror.com
+
+# 腾讯云
+DOMAIN-SUFFIX,mirrors.cloud.tencent.com
+DOMAIN-SUFFIX,mirrors.tencent.com
+
+# 华为云
+DOMAIN-SUFFIX,repo.huaweicloud.com
+DOMAIN-SUFFIX,mirrors.huaweicloud.com
+
+# 高校开源镜像
+DOMAIN-SUFFIX,mirrors.tuna.tsinghua.edu.cn
+DOMAIN-SUFFIX,mirrors.ustc.edu.cn
+DOMAIN-SUFFIX,mirrors.bfsu.edu.cn
+DOMAIN-SUFFIX,mirror.sjtu.edu.cn
+DOMAIN-SUFFIX,mirrors.sjtug.sjtu.edu.cn
+DOMAIN-SUFFIX,mirrors.nju.edu.cn
+DOMAIN-SUFFIX,mirrors.zju.edu.cn
+
+# 国内 Go / Python 镜像
+DOMAIN-SUFFIX,goproxy.io
+DOMAIN-SUFFIX,goproxy.cn
+DOMAIN-SUFFIX,goproxy.com.cn
+DOMAIN-SUFFIX,pypi.doubanio.com

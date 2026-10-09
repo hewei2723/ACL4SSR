@@ -1,11 +1,20 @@
 # Developer Custom - 开发工具、IDE、代码托管与依赖仓库
-# 用于 IDEA/JetBrains、Gradle Wrapper、Maven、Android、Git、npm、PyPI、Go、Rust、Docker 等
+# 用于 Android Studio、IDEA/JetBrains、Gradle Wrapper、Maven、Android、Git、npm、PyPI、Go、Rust、Docker 等
 # 在订阅模板的“🧑‍💻 开发服务”组中可选择 DIRECT 或代理策略
 
 # IntelliJ IDEA 进程（Mihomo 桌面端）
 PROCESS-NAME,idea64.exe
 PROCESS-NAME,idea.exe
 PROCESS-NAME,idea
+
+# Android Studio 进程；Gradle daemon 使用仓库域名规则，不笼统接管所有 Java 程序
+PROCESS-NAME,studio64.exe
+PROCESS-NAME,studio.exe
+PROCESS-NAME,studio
+
+# Android SDK / Google Maven 下载与重定向
+DOMAIN,dl-ssl.google.com
+DOMAIN-SUFFIX,gvt1.com
 
 # JetBrains / IntelliJ / Kotlin
 DOMAIN-SUFFIX,intellij.com

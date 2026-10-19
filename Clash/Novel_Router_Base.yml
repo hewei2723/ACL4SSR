@@ -1,0 +1,190 @@
+# 路由器小说测试基础配置，由 ACL4SSR_Online_Novel_Router.ini 引用
+# 节点、策略组和 rules 由 subconverter 生成；OpenClash 管理入站/DNS 监听和防火墙。
+mode: rule
+log-level: info
+ipv6: false
+
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - localhost
+    - "*.arpa"
+    - time.apple.com
+    - time.windows.com
+    - "+.pool.ntp.org"
+  use-hosts: true
+  use-system-hosts: true
+  prefer-h3: false
+  # 出口由 DNS 地址后的组名显式指定，避免 MATCH,DIRECT 影响境外 DNS。
+  respect-rules: false
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  # 普通用户的解析不依赖小说代理节点。
+  nameserver:
+    - "223.5.5.5#DIRECT"
+    - "119.29.29.29#DIRECT"
+  proxy-server-nameserver:
+    - "223.5.5.5#DIRECT"
+    - "119.29.29.29#DIRECT"
+  direct-nameserver:
+    - "223.5.5.5#DIRECT"
+    - "119.29.29.29#DIRECT"
+  direct-nameserver-follow-policy: false
+  fallback: []
+  # 与 Novel_Router.list 的域名白名单对应；新加域名时也需同步此处。
+  # 使用 HTTPS/TCP，不依赖节点 UDP；节点必须可用。
+  nameserver-policy:
+    "book-api-dev-en.taoxtao.cn":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "book-api-dev-en.funread.cyou":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "book-api-en.yoread.cyou":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "oss-novel-en.littleze.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.facebook.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.facebook.net":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.fb.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.fbcdn.net":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.fbsbx.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.accountkit.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.firebaseio.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.firebasedatabase.app":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.firebaseapp.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.crashlytics.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.google-analytics.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.app-measurement.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "mtalk.google.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "mtalk4.google.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "alt1-mtalk.google.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "alt2-mtalk.google.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "alt3-mtalk.google.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "alt4-mtalk.google.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "alt5-mtalk.google.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "alt6-mtalk.google.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "alt7-mtalk.google.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "alt8-mtalk.google.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.doubleclick.net":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.googlesyndication.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.googleadservices.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.googletagservices.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "+.googleadsserving.cn":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "firebaseinstallations.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "firebaseremoteconfig.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "firebaseremoteconfigrealtime.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "firebase-settings.crashlytics.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "firebasecrashlytics.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "crashlyticsreports-pa.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "firebaselogging.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "firebaselogging-pa.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "firebaseinappmessaging.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "fcm.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "fcmregistrations.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "fcmconnection.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "android.clients.google.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "device-provisioning.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "identitytoolkit.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "securetoken.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "firestore.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"
+    "firebasestorage.googleapis.com":
+      - "https://dns.google/dns-query#📖 小说开发"
+      - "https://cloudflare-dns.com/dns-query#📖 小说开发"

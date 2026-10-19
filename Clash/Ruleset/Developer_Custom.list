@@ -16,6 +16,14 @@ PROCESS-NAME,studio
 DOMAIN,dl-ssl.google.com
 DOMAIN-SUFFIX,gvt1.com
 
+# IDEA / JetBrains Marketplace 插件搜索与下载（显式列出，亦被下方后缀规则覆盖）
+# 官方网络要求：https://www.jetbrains.com/help/ide-services-cloud/network-access-requirements.html
+DOMAIN,plugins.jetbrains.com
+DOMAIN,downloads.marketplace.jetbrains.com
+DOMAIN,download.jetbrains.com
+DOMAIN,download-cdn.jetbrains.com
+DOMAIN,cache-redirector.jetbrains.com
+
 # JetBrains / IntelliJ / Kotlin
 DOMAIN-SUFFIX,intellij.com
 DOMAIN-SUFFIX,intellij.net

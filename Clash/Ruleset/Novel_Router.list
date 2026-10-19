@@ -1,0 +1,65 @@
+# 路由器小说测试专用：业务 API、Facebook、Firebase、Google 广告 SDK
+# 仅域名白名单代理；共享 SDK 域名同样会匹配其他 App 的请求。
+# 不使用此文件作为 App/用户访问控制；未知项目专用域名需根据日志补充。
+# 本列表不拦截广告；域名规则不限制 URL 路径。
+
+# 业务 API：同时覆盖 /reading-con、/advance 和该主机其他接口
+DOMAIN,book-api-dev-en.taoxtao.cn
+DOMAIN,book-api-dev-en.funread.cyou
+DOMAIN,book-api-en.yoread.cyou
+DOMAIN,oss-novel-en.littleze.com
+
+# Facebook / Meta SDK、登录与静态资源
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,facebook.net
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,accountkit.com
+
+# Firebase：安装、配置、认证、数据库、存储、统计及崩溃上报
+DOMAIN-SUFFIX,firebaseio.com
+DOMAIN-SUFFIX,firebasedatabase.app
+DOMAIN-SUFFIX,firebaseapp.com
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN-SUFFIX,app-measurement.com
+
+# FCM 与 Google SDK 配套资源；Google 网页交给常规代理分流
+DOMAIN,mtalk.google.com
+DOMAIN,mtalk4.google.com
+DOMAIN,alt1-mtalk.google.com
+DOMAIN,alt2-mtalk.google.com
+DOMAIN,alt3-mtalk.google.com
+DOMAIN,alt4-mtalk.google.com
+DOMAIN,alt5-mtalk.google.com
+DOMAIN,alt6-mtalk.google.com
+DOMAIN,alt7-mtalk.google.com
+DOMAIN,alt8-mtalk.google.com
+
+# AdMob / Google Mobile Ads：广告请求、JS、素材及同意管理
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,googleadservices.com
+DOMAIN-SUFFIX,googletagservices.com
+DOMAIN-SUFFIX,googleadsserving.cn
+
+# Firebase / FCM 具体 API，不代理整个 Google API 域名家族
+DOMAIN,firebaseinstallations.googleapis.com
+DOMAIN,firebaseremoteconfig.googleapis.com
+DOMAIN,firebaseremoteconfigrealtime.googleapis.com
+DOMAIN,firebase-settings.crashlytics.com
+DOMAIN,firebasecrashlytics.googleapis.com
+DOMAIN,crashlyticsreports-pa.googleapis.com
+DOMAIN,firebaselogging.googleapis.com
+DOMAIN,firebaselogging-pa.googleapis.com
+DOMAIN,firebaseinappmessaging.googleapis.com
+DOMAIN,fcm.googleapis.com
+DOMAIN,fcmregistrations.googleapis.com
+DOMAIN,fcmconnection.googleapis.com
+DOMAIN,android.clients.google.com
+DOMAIN,device-provisioning.googleapis.com
+DOMAIN,identitytoolkit.googleapis.com
+DOMAIN,securetoken.googleapis.com
+DOMAIN,firestore.googleapis.com
+DOMAIN,firebasestorage.googleapis.com

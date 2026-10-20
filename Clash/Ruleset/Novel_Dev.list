@@ -3,9 +3,10 @@
 
 # 业务 API：同时覆盖 /reading-con、/advance 和该主机其他接口
 DOMAIN,book-api-dev-en.taoxtao.cn
-DOMAIN,book-api-dev-en.funread.cyou
-DOMAIN,book-api-en.yoread.cyou
-DOMAIN,oss-novel-en.littleze.com
+DOMAIN-SUFFIX,littleze.com
+DOMAIN-SUFFIX,yoread.cyou
+DOMAIN-SUFFIX,oread.cyou
+DOMAIN-SUFFIX,funread.cyou
 
 # Facebook / Meta SDK、登录与静态资源
 DOMAIN-SUFFIX,facebook.com

@@ -119,3 +119,9 @@ DOMAIN-SUFFIX,spring.net
 DOMAIN-SUFFIX,stackoverflow.com
 DOMAIN-SUFFIX,sourcegraph.com
 
+# Figma / FigJam / Dev Mode / Make / Sites
+# https://help.figma.com/hc/en-us/articles/19424714305943-Adjust-your-network-settings
+DOMAIN-SUFFIX,figma.com
+DOMAIN-SUFFIX,figma.site
+DOMAIN-SUFFIX,figma.app
+DOMAIN-SUFFIX,figmausercontent.com

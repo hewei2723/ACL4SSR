@@ -1,0 +1,55 @@
+# ============================================================
+# Hermes Server Clash.Meta Base  (由 Hermes_Server.ini 经 clash_rule_base 引用)
+# 作用：为转换出的订阅提供端口 / DNS 等基础字段
+# 重点：不把 DNS 交给代理组解析（原订阅用 udp://8.8.8.8#🌐DNS出口 会失败），
+#       统一使用本机可达的 223.5.5.5 / 119.29.29.29；境外域名由节点远端解析即可。
+# ============================================================
+mixed-port: 7890
+allow-lan: false
+bind-address: 127.0.0.1
+ipv6: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+experimental:
+  ignore-resolve-fail: true
+
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - geosite:private
+    - geosite:category-ntp
+    - "*.lan"
+    - "*.local"
+    - localhost
+    - "*.arpa"
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver-policy:
+    geosite:private:
+      - 223.5.5.5
+      - 119.29.29.29
+    geosite:cn:
+      - 223.5.5.5
+      - 119.29.29.29
+    geosite:geolocation-!cn:
+      - 223.5.5.5
+      - 119.29.29.29
+  proxy-server-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  direct-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  fallback: []

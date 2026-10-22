@@ -1,0 +1,21 @@
+# Hermes Server Direct - Hermes 服务器关键链路直连白名单
+# 目的：保证服务器上的 Hermes 网关永不被代理接管（模型 API / 微信通道 / 官方源）
+# 用法：在 ACL4SSR ini 中以 🎯 全球直连 引用；必须放在所有代理规则之前
+# 说明：域名来自服务器实测 —— model.base_url=api.modelarts-maas.com,
+#       WEIXIN_BASE_URL=ilinkai.weixin.qq.com, WEIXIN_CDN_BASE_URL=novac2c.cdn.weixin.qq.com
+
+# 模型 API（Huawei ModelArts）
+DOMAIN-SUFFIX,modelarts-maas.com
+
+# 微信 iLink 网关 / CDN / 腾讯媒体
+DOMAIN-SUFFIX,weixin.qq.com
+DOMAIN-SUFFIX,weixin.com
+DOMAIN-SUFFIX,wechat.com
+DOMAIN-SUFFIX,weixinbridge.com
+DOMAIN-SUFFIX,tencent.com
+DOMAIN-SUFFIX,gtimg.cn
+DOMAIN-SUFFIX,qpic.cn
+DOMAIN-SUFFIX,qlogo.cn
+
+# Hermes 官方文档 / 更新源
+DOMAIN-SUFFIX,nousresearch.com

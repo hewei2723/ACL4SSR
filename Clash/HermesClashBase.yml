@@ -37,6 +37,16 @@ dns:
     - 223.5.5.5
     - 119.29.29.29
   nameserver-policy:
+    # Bing 使用直连 HTTPS DNS，避免普通 DNS 返回空解析结果。
+    "+.bing.com":
+      - "https://dns.alidns.com/dns-query#DIRECT"
+      - "https://doh.pub/dns-query#DIRECT"
+    "+.bing.net":
+      - "https://dns.alidns.com/dns-query#DIRECT"
+      - "https://doh.pub/dns-query#DIRECT"
+    "+.bingapis.com":
+      - "https://dns.alidns.com/dns-query#DIRECT"
+      - "https://doh.pub/dns-query#DIRECT"
     geosite:private:
       - 223.5.5.5
       - 119.29.29.29
@@ -49,6 +59,7 @@ dns:
   proxy-server-nameserver:
     - 223.5.5.5
     - 119.29.29.29
+  direct-nameserver-follow-policy: true
   direct-nameserver:
     - 223.5.5.5
     - 119.29.29.29
